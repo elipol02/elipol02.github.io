@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eli Pollack</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <main>
+
+    <!-- Header -->
+    <section class="header">
+      <h1>Eli Pollack</h1>
+      <p class="bio">ECE graduate building backend systems, operational software, and real-world integrations.</p>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+
+      <div class="project">
+        <div class="project-header">
+          <h2>Real-Time Circuit Breaker Monitoring System</h2>
+          <span class="tag">Operational Infrastructure</span>
+        </div>
+        <p class="problem-label">The Problem</p>
+        <p class="problem">
+          Industrial electrical systems lack accessible real-time monitoring — faults go undetected
+          until failure occurs.
+        </p>
+        <ul>
+          <li>Built backend services to ingest telemetry from electrical systems and process breaker events in real time.</li>
+          <li>Designed event-driven alerting logic to detect anomalies and trigger operational notifications.</li>
+          <li>Implemented full-stack monitoring dashboards for live system visibility and diagnostics.</li>
+          <li>Integrated sensor data pipelines with backend APIs and persistent storage.</li>
+        </ul>
+        <div class="outcome">
+          Operational monitoring platform capable of detecting faults in real time across industrial electrical infrastructure.
+        </div>
+        <div class="tech">
+          <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>WebSockets</span><span>Sensor Integration</span>
+        </div>
+        <div class="project-images">
+          <img src="assets/circuit management.png" alt="Circuit breaker management dashboard" />
+        </div>
+        <div class="project-links">
+          <span class="private">Repository: Private</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h2>AI Medical Feedback Training Platform</h2>
+          <span class="tag">AI Data Processing</span>
+        </div>
+        <p class="problem-label">The Problem</p>
+        <p class="problem">
+          Medical training programs rely on manual, unstructured evaluation processes that are slow
+          and inconsistent.
+        </p>
+        <ul>
+          <li>Built backend pipelines that process text, voice, and document data into structured evaluation metrics.</li>
+          <li>Designed APIs to support multi-user workflows and data retrieval across training programs.</li>
+          <li>Implemented AI-driven feedback generation integrated into operational evaluation workflows.</li>
+          <li>Deployed backend services supporting internal production usage.</li>
+        </ul>
+        <div class="outcome">
+          Production platform used by medical training programs to generate structured performance insights from unstructured evaluations.
+        </div>
+        <div class="tech">
+          <span>Python</span><span>FastAPI</span><span>LLM and Real-Time APIs</span><span>PostgreSQL</span>
+        </div>
+        <div class="project-images">
+          <img src="assets/AI Feedback Dashboard.png" alt="AI feedback dashboard" />
+          <img src="assets/AI Feedback.png" alt="AI feedback output" />
+        </div>
+        <div class="project-links">
+          <span class="private">Repository: Private</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h2>Multi-Drone Ground Control Station</h2>
+          <span class="tag">Distributed Telemetry</span>
+        </div>
+        <p class="problem-label">The Problem</p>
+        <p class="problem">
+          Coordinating multiple UAVs during missions requires aggregating telemetry and issuing
+          commands across a dynamic, distributed network.
+        </p>
+        <ul>
+          <li>Built backend services aggregating telemetry streams from multiple drones in real time.</li>
+          <li>Implemented command routing and control interfaces for coordinated multi-drone operation.</li>
+          <li>Designed modular architecture allowing drones to dynamically join the control network.</li>
+          <li>Integrated MAVLink telemetry with live mapping and monitoring dashboards.</li>
+        </ul>
+        <div class="outcome">
+          Centralized GCS supporting mapping and search-and-rescue missions with live multi-drone coordination.
+        </div>
+        <div class="tech">
+          <span>Python</span><span>C++</span><span>MAVLink</span><span>WebSockets</span><span>React</span><span>PX4 Autopilot</span><span>Onboard Computing</span>
+        </div>
+        <div class="project-images">
+          <img src="assets/drone control.png" alt="Drone ground control station" />
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/UW-CTRL/WISAR-GCS" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h2>Embedded Sleep Monitoring Mask</h2>
+          <span class="tag">Embedded Systems</span>
+        </div>
+        <p class="problem-label">The Problem</p>
+        <p class="problem">
+          Consumer sleep monitoring lacks physiological sensing accuracy due to reliance on
+          motion-based detection rather than analog biosignal capture.
+        </p>
+        <ul>
+          <li>Designed custom PCB using KiCAD integrating analog sensor systems.</li>
+          <li>Developed embedded firmware for signal acquisition and real-time data processing.</li>
+          <li>Built full embedded system for physiological data capture during sleep.</li>
+        </ul>
+        <div class="outcome">
+          Functional wearable device capturing physiological sleep data via custom hardware and embedded firmware.
+        </div>
+        <div class="tech">
+          <span>Arduino / C++</span><span>KiCAD</span><span>Analog Sensors</span><span>Embedded Firmware</span><span>PCB Design</span>
+        </div>
+        <div class="project-images">
+          <img src="assets/pcb design.png" alt="PCB design" />
+          <img src="assets/completed pcb.jpg" alt="Completed PCB" />
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/elipol02/ECE475-Dreamsync" target="_blank">GitHub</a>
+          <a href="assets/Print Schematic.pdf" target="_blank">PCB Schematic ↗</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h2>AI Homework Assistant + Fitness Advisor</h2>
+          <span class="tag">AI Applications</span>
+        </div>
+        <p class="problem-label">The Problem</p>
+        <p class="problem">
+          LLM interfaces without structured retrieval and domain-specific orchestration produce
+          generic, low-utility outputs.
+        </p>
+        <ul>
+          <li>Built backend pipelines for file retrieval and prompt orchestration using LLM APIs.</li>
+          <li>Implemented code interpreter functionality for solving technical problems step-by-step.</li>
+          <li>Designed recommendation logic for generating personalized fitness plans.</li>
+        </ul>
+        <div class="outcome">
+          Functional AI tools demonstrating retrieval-augmented generation pipelines and structured recommendation systems.
+        </div>
+        <div class="tech">
+          <span>Python</span><span>FastAPI</span><span>LLM APIs</span><span>RAG Pipelines</span>
+        </div>
+        <div class="project-images">
+          <img src="assets/AI homework.png" alt="AI homework assistant" />
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/elipol02/Wisdomwiz" target="_blank">Wisdomwiz</a>
+          <a href="https://github.com/elipol02/espfitnessapp" target="_blank">Fitness App</a>
+          <a href="https://espfitnessapp.com" target="_blank">Live ↗</a> <span class="private">(requires system password)</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Eli Pollack &mdash; <a href="mailto:elipol02@icloud.com">elipol02@icloud.com</a></p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.project-images img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>
