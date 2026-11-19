@@ -273,3 +273,25 @@ footer a:hover {
   }
 }
 
+
+/* Name with GitHub link */
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.name-row h1 {
+  margin-bottom: 0;
+}
+
+.social {
+  display: inline-flex;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.social:hover {
+  color: var(--text);
+}
