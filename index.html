@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eli Pollack</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
@@ -22,9 +22,9 @@
     <nav class="toc" aria-label="Projects">
       <p class="toc-label">Projects</p>
       <ol>
-        <li><a href="#energy-monitoring">Real-Time Circuit Breaker Monitoring</a><span>Operational Infrastructure</span></li>
-        <li><a href="#medical-feedback">AI Medical Feedback Platform</a><span>AI Data Processing</span></li>
         <li><a href="#drone-gcs">Multi-Drone Ground Control Station</a><span>Distributed Telemetry</span></li>
+        <li><a href="#medical-feedback">AI Medical Feedback Platform</a><span>AI Data Processing</span></li>
+        <li><a href="#energy-monitoring">Real-Time Circuit Breaker Monitoring</a><span>Operational Infrastructure</span></li>
         <li><a href="#sleep-mask">Embedded Sleep Monitoring Mask</a><span>Embedded Systems</span></li>
       </ol>
     </nav>
@@ -32,99 +32,82 @@
     <!-- Projects -->
     <section class="projects">
 
-      <article class="project" id="energy-monitoring">
-        <div class="project-header">
-          <h2>Real-Time Circuit Breaker Monitoring System</h2>
-          <span class="tag">Operational Infrastructure</span>
-        </div>
-        <p class="problem-label">The Problem</p>
-        <p class="problem">Faults in industrial electrical systems often go unnoticed until something fails.</p>
-        <ul>
-          <li>Backend services that ingest breaker telemetry and process events in real time</li>
-          <li>Event-driven alerting that flags anomalies and notifies operators</li>
-          <li>Live dashboards for monitoring and diagnostics, from substation down to individual circuits</li>
-          <li>Sensor data pipelines connected to backend APIs and persistent storage</li>
-        </ul>
-        <div class="tech">
-          <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>WebSockets</span><span>Sensor Integration</span>
-        </div>
-        <div class="project-images">
-          <img src="assets/energy-monitoring.png" alt="Facility view showing the breaker hierarchy with live current and voltage readings and monitoring charts" />
-        </div>
-        <div class="project-links">
-          <span class="private">Repository: Private</span>
-        </div>
-      </article>
-
-      <article class="project" id="medical-feedback">
-        <div class="project-header">
-          <h2>AI Medical Feedback Training Platform</h2>
-          <span class="tag">AI Data Processing</span>
-        </div>
-        <p class="problem-label">The Problem</p>
-        <p class="problem">Medical training programs evaluate trainees by hand, which is slow and inconsistent.</p>
-        <ul>
-          <li>Pipelines that turn text, voice, and document input into structured evaluation metrics</li>
-          <li>APIs for multi-user workflows across training programs</li>
-          <li>AI-guided feedback collection built into the evaluation workflow</li>
-          <li>Backend services deployed and used in production</li>
-        </ul>
-        <div class="tech">
-          <span>Python</span><span>FastAPI</span><span>LLM and Real-Time APIs</span><span>PostgreSQL</span>
-        </div>
-        <div class="project-images">
-          <img src="assets/feedback-submit.png" alt="AI-guided feedback submission chat for a fellow" />
-          <img src="assets/feedback-report.png" alt="Individual learner report with competency radar and feedback heatmap" />
-        </div>
-        <div class="project-links">
-          <span class="private">Repository: Private</span>
-        </div>
-      </article>
-
       <article class="project" id="drone-gcs">
-        <div class="project-header">
-          <h2>Multi-Drone Ground Control Station</h2>
-          <span class="tag">Distributed Telemetry</span>
-        </div>
-        <p class="problem-label">The Problem</p>
-        <p class="problem">Running several drones on one mission means tracking all their telemetry and commanding them from one place.</p>
+        <h2>Multi-Drone Ground Control Station</h2>
+        <p class="meta">Distributed Telemetry · Research project, developed the ground control station</p>
+        <p class="summary">A custom ground control station for flying several MAVLink drones from one screen.</p>
         <ul>
-          <li>Backend services that combine live telemetry from multiple drones</li>
-          <li>Command routing and controls for coordinated flight</li>
-          <li>Modular design so drones can join the network mid-mission</li>
-          <li>MAVLink telemetry feeding live maps and monitoring dashboards</li>
+          <li>One live card per drone showing battery, GPS fix and satellite count, ground speed, climb rate, and altitude</li>
+          <li>Per-drone commands (arm, takeoff, return-to-launch, mode and mission select), plus Start, Stop, and Return All for the whole fleet</li>
+          <li>Each drone's mission waypoints and live position drawn on a satellite map</li>
+          <li>Onboard computers run object detection and send detections to the ground station over MAVLink</li>
+          <li>Field-tested with two drones flying separate search patterns at the same time</li>
         </ul>
-        <div class="tech">
-          <span>Python</span><span>C++</span><span>MAVLink</span><span>WebSockets</span><span>React</span><span>PX4 Autopilot</span><span>Onboard Computing</span>
-        </div>
         <div class="project-images">
           <video src="assets/drone-demo.mp4" poster="assets/drone-demo-poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
           <img src="assets/drone control.png" alt="Drone ground control station" />
         </div>
+        <p class="stack">Built with Python, C++, MAVLink, WebSockets, React, PX4 Autopilot, Onboard Computing</p>
         <div class="project-links">
           <a href="https://github.com/UW-CTRL/WISAR-GCS" target="_blank">GitHub</a>
         </div>
       </article>
 
-      <article class="project" id="sleep-mask">
-        <div class="project-header">
-          <h2>Embedded Sleep Monitoring Mask</h2>
-          <span class="tag">Embedded Systems</span>
+      <article class="project" id="medical-feedback">
+        <h2>AI Medical Feedback Training Platform</h2>
+        <p class="meta">AI Data Processing · Industry project with medical educators, sole developer</p>
+        <p class="summary">A platform where faculty give feedback on medical trainees by talking to an AI assistant, which turns that feedback into competency reports.</p>
+        <ul>
+          <li>Chat-based feedback flow where the assistant prompts reviewers with follow-up questions and examples, and reviewers can switch to voice</li>
+          <li>Comments mapped to the program's competency framework (EPAs and milestones)</li>
+          <li>Learner reports with a competency radar chart compared against the program average, plus a score heatmap</li>
+          <li>Program and activity reports, with admin tools for managing programs and users</li>
+        </ul>
+        <div class="project-images">
+          <img src="assets/feedback-submit.png" alt="AI-guided feedback submission chat for a fellow" />
+          <img src="assets/feedback-report.png" alt="Individual learner report with competency radar and feedback heatmap" />
         </div>
-        <p class="problem-label">The Problem</p>
-        <p class="problem">Consumer sleep trackers rely on motion, not physiological signals, so their data is imprecise.</p>
+        <p class="stack">Built with Python, FastAPI, LLM and Real-Time APIs, PostgreSQL</p>
+        <div class="project-links">
+          <span class="private">Repository: Private</span>
+        </div>
+      </article>
+
+      <article class="project" id="energy-monitoring">
+        <h2>Real-Time Circuit Breaker Monitoring System</h2>
+        <p class="meta">Operational Infrastructure · Industry project with electrical contractors, sole developer</p>
+        <p class="summary">A platform for watching a facility's electrical system live, from the substation down to individual circuits, with alerts when something goes wrong.</p>
+        <ul>
+          <li>Facility tree that mirrors the real wiring, from substation to distribution board, breaker, panel, and circuit, with ratings at every level</li>
+          <li>Live current and voltage for every circuit, shown against its breaker rating</li>
+          <li>Pinned charts that track current, voltage, and temperature for any circuit side by side</li>
+          <li>Alerts and critical-circuit flags, with each organization's facilities kept separate</li>
+        </ul>
+        <div class="project-images">
+          <img src="assets/energy-monitoring.png" alt="Facility view showing the breaker hierarchy with live current and voltage readings and monitoring charts" />
+        </div>
+        <p class="stack">Built with Python, FastAPI, PostgreSQL, React, WebSockets, Sensor Integration</p>
+        <div class="project-links">
+          <span class="private">Repository: Private</span>
+        </div>
+      </article>
+
+
+
+      <article class="project" id="sleep-mask">
+        <h2>Embedded Sleep Monitoring Mask</h2>
+        <p class="meta">Embedded Systems · Capstone project, designed the PCB and assisted with embedded code</p>
+        <p class="summary">A wearable sleep mask that records physiological signals overnight using custom analog sensing hardware.</p>
         <ul>
           <li>Custom PCB designed in KiCAD with analog sensor circuitry</li>
           <li>Embedded firmware for signal acquisition and real-time processing</li>
           <li>Complete wearable system that records physiological data during sleep</li>
         </ul>
-        <div class="tech">
-          <span>Arduino / C++</span><span>KiCAD</span><span>Analog Sensors</span><span>Embedded Firmware</span><span>PCB Design</span>
-        </div>
         <div class="project-images">
           <img src="assets/pcb design.png" alt="PCB design" />
           <img src="assets/completed pcb.jpg" alt="Completed PCB" />
         </div>
+        <p class="stack">Built with Arduino / C++, KiCAD, Analog Sensors, Embedded Firmware, PCB Design</p>
         <div class="project-links">
           <a href="https://github.com/elipol02/ECE475-Dreamsync" target="_blank">GitHub</a>
           <a href="assets/Print Schematic.pdf" target="_blank">PCB Schematic ↗</a>
