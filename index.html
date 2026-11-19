@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eli Pollack</title>
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
@@ -22,6 +22,8 @@
     <nav class="toc" aria-label="Projects">
       <p class="toc-label">Projects</p>
       <ol>
+        <li><a href="#operations-platform">Logistics Operations Platform</a><span>Business Software</span></li>
+        <li><a href="#phone-agent">AI Phone Agent for Property Management</a><span>Voice AI</span></li>
         <li><a href="#drone-gcs">Multi-Drone Ground Control Station</a><span>Distributed Telemetry</span></li>
         <li><a href="#medical-feedback">AI Medical Feedback Platform</a><span>AI Data Processing</span></li>
         <li><a href="#energy-monitoring">Real-Time Circuit Breaker Monitoring</a><span>Operational Infrastructure</span></li>
@@ -31,6 +33,40 @@
 
     <!-- Projects -->
     <section class="projects">
+
+      <article class="project" id="operations-platform">
+        <h2>Logistics Operations Platform</h2>
+        <p class="meta">Business Software · Current role, sole developer</p>
+        <p class="summary">A set of business tools for a logistics company that handles hiring, employee scheduling, mileage and shift tracking, and parking lot operations.</p>
+        <ul>
+          <li>AI-assisted hiring that screens resumes, reviews uploaded documents, and runs live screening calls with applicants</li>
+          <li>Employee scheduling for shifts across multiple locations and roles</li>
+          <li>Mileage and shift tracking for drivers, feeding into payroll</li>
+          <li>Parking lot management with automated pricing and customer service request handling</li>
+          <li>Driver mobile app for picking up shifts and sharing location while on the job</li>
+          <li>In daily use by the company's staff and drivers</li>
+        </ul>
+        <p class="stack">Built with FastAPI, Next.js, React Native, PostgreSQL</p>
+        <div class="project-links">
+          <span class="private">Repository: Private</span>
+        </div>
+      </article>
+
+      <article class="project" id="phone-agent">
+        <h2>AI Phone Agent for Property Management</h2>
+        <p class="meta">Voice AI · Current role, took over and shipped to production</p>
+        <p class="summary">An AI phone agent that answers calls for property managers and pulls live information from their property management software.</p>
+        <ul>
+          <li>Voice agent connected through a custom server to property management APIs such as Buildium</li>
+          <li>Lets tenants, owners, and prospects check balances, submit maintenance requests, schedule showings, and more</li>
+          <li>Custom dashboard for property managers</li>
+          <li>Took over a half-finished codebase, reworked it, and took it to production with real callers</li>
+        </ul>
+        <p class="stack">Built with Fastify, PostgreSQL</p>
+        <div class="project-links">
+          <span class="private">Repository: Private</span>
+        </div>
+      </article>
 
       <article class="project" id="drone-gcs">
         <h2>Multi-Drone Ground Control Station</h2>
@@ -101,13 +137,14 @@
         <ul>
           <li>Custom PCB designed in KiCAD with analog sensor circuitry</li>
           <li>Helped write firmware for signal acquisition and real-time processing</li>
+          <li>Helped build the Bluetooth link that streams sensor data to an Android app</li>
           <li>Wearable system that records physiological data during sleep</li>
         </ul>
         <div class="project-images">
           <img src="assets/pcb design.png" alt="PCB design" />
           <img src="assets/completed pcb.jpg" alt="Completed PCB" />
         </div>
-        <p class="stack">Built with Arduino / C++, KiCAD, Analog Sensors, Embedded Firmware, PCB Design</p>
+        <p class="stack">Built with Arduino / C++, KiCAD, Analog Sensors, Embedded Firmware, PCB Design, Bluetooth, Android</p>
         <div class="project-links">
           <a href="https://github.com/elipol02/ECE475-Dreamsync" target="_blank">GitHub</a>
           <a href="assets/Print Schematic.pdf" target="_blank">PCB Schematic ↗</a>
